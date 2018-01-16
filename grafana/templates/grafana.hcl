@@ -10,6 +10,9 @@ job "${job_name}" {
       driver = "docker"
       config {
         image   = "grafana/grafana"
+        port_map = {
+          http = 3000
+        }
       }
 
       constraint {
@@ -40,4 +43,3 @@ job "${job_name}" {
     }
   }
 }
-
