@@ -30,6 +30,12 @@ job "hashi-ui" {
         NOMAD_ADDR   = "${nomad_address}"
       }
 
+      constraint {
+        attribute = "$${node.class}"
+        operator  = "="
+        value     = "${node_class}"
+      }
+
       resources {
         cpu    = ${cpu_limit}
         memory = ${mem_limit}
@@ -45,4 +51,3 @@ job "hashi-ui" {
     }
   }
 }
-
