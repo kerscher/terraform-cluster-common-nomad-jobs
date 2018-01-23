@@ -10,7 +10,8 @@ job "hashi-ui" {
       driver = "rkt"
 
       config {
-        image        = "jippi/hashi-ui"
+        insecure_options = ["image"]
+        image            = "docker://jippi/hashi-ui"
         port_map {
           http = "3000-tcp"
         }
