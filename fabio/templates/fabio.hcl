@@ -56,7 +56,7 @@ job "${job_name}" {
 
       template {
         data = <<EOH
-# registry.consul.addr = localhost:8500
+${configuration}
         EOH
 
         destination = "local/fabio.properties"

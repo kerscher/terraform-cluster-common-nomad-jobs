@@ -3,6 +3,12 @@ variable "job_name" {
   type        = "string"
 }
 
+variable "configuration" {
+  description = "fabio configuration written to fabio.properties"
+  type        = "string"
+  default     = "# registry.consul.addr = localhost:8500"
+}
+
 variable "node_class" {
   description = "nomad node class that should run this job"
   type        = "string"
