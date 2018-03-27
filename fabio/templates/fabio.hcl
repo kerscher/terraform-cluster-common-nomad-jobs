@@ -22,7 +22,7 @@ job "${job_name}" {
         command = "local/fabio-${version}-linux_amd64"
 
         args = [
-          "-cfg local/fabio.properties"
+          "-cfg", "local/fabio.properties"
         ]
       }
 
