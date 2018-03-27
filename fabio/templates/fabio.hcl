@@ -56,9 +56,9 @@ job "${job_name}" {
       }
 
       template {
-        data = <<EOH
+        data = <<EOF
 ${configuration}
-        EOH
+EOF
 
         destination = "local/fabio.properties"
       }
